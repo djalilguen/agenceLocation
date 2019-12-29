@@ -1,0 +1,36 @@
+<div class="entete"> 
+    <div style="float: right; margin: 10px; align-items: center;">   <!-- div pour logo text -->
+        <img src="images/login.png" alt='login' />
+        
+        <c:if test="${sessionScope.username == null}">
+            <a style = "color:white" href="Controleur?action=connexion"><fmt:message key="connect" /></a>
+        </c:if>
+        <c:if test="${sessionScope.username != null}">
+            <p style = "color:white">${sessionScope.username}<br>
+            <a style = "color:white" href="Controleur?action=disconnect"><fmt:message key="disconnect" /></a> </p>
+        </c:if>
+    </div>
+    <div class="col-6">
+        <div class="cellule petit">   <!-- div pour image d entete -->
+            <img src="images/logo-car.png" alt='' />
+            <p> <a style = "color:white" href="Controleur?action=${requestScope.action}&langue=fr_CA" >Français</a></p>
+            <p> <a style = "color:white" href="Controleur?action=${requestScope.action}&langue=en_CA" >Anglais</a></p>
+        </div>
+
+    </div>
+
+    <div class="divRelative">
+        <div class="logo">   <!-- div pour logo text -->
+            <img src="images/design-car.png" alt='LOGO' />
+
+        </div>
+
+        <div class="menu">   <!-- div pour menu -->
+            <fmt:bundle basename="ressources_i18n.Messages">
+                <p> <a href="Controleur?action=contact"><fmt:message key="contact" /></a></p>
+                <p> <a href="Controleur?action=catalogue"><fmt:message key="louer.voiture" /></a></p>
+                <p> <a href="Controleur?action=default"><fmt:message key="accueil" /></a></p>
+            </fmt:bundle>
+        </div>
+    </div>
+</div>

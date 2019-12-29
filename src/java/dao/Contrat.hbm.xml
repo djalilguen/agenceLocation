@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-09-27 22:49:49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dao.Contrat" table="CONTRAT" schema="NASRI" optimistic-lock="version">
+        <id name="numContrat" type="int">
+            <column name="NUM_CONTRAT" precision="7" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="client" class="dao.Client" fetch="select">
+            <column name="NUMCLIENT" precision="3" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="vehicule" class="dao.Vehicule" fetch="select">
+            <column name="MATRICULE" length="10" not-null="true" />
+        </many-to-one>
+        <property name="dateDepart" type="date">
+            <column name="DATE_DEPART" length="7" not-null="true" />
+        </property>
+        <property name="dateRetourSuppose" type="date">
+            <column name="DATE_RETOUR_SUPPOSE" length="7" not-null="true" />
+        </property>
+        <property name="dateRetourEffective" type="date">
+            <column name="DATE_RETOUR_EFFECTIVE" length="7" not-null="true" />
+        </property>
+        <property name="dateContrat" type="date">
+            <column name="DATE_CONTRAT" length="7" not-null="true" />
+        </property>
+        <property name="caution" type="big_decimal">
+            <column name="CAUTION" precision="5" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

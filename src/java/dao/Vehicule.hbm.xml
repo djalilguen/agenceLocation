@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-09-27 22:49:49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dao.Vehicule" table="VEHICULE" schema="NASRI" optimistic-lock="version">
+        <id name="matricule" type="string">
+            <column name="MATRICULE" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="modele" class="dao.Modele" fetch="select">
+            <column name="CODE_MODEL" precision="3" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="categorie" type="string">
+            <column name="CATEGORIE" length="20" not-null="true" />
+        </property>
+        <property name="automatique" type="boolean">
+            <column name="AUTOMATIQUE" precision="1" scale="0" not-null="true" />
+        </property>
+        <set name="contrats" table="CONTRAT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="MATRICULE" length="10" not-null="true" />
+            </key>
+            <one-to-many class="dao.Contrat" />
+        </set>
+    </class>
+</hibernate-mapping>

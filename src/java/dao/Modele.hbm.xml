@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-09-27 22:49:49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dao.Modele" table="MODELE" schema="NASRI" optimistic-lock="version">
+        <id name="codeModel" type="short">
+            <column name="CODE_MODEL" precision="3" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomModel" type="string">
+            <column name="NOM_MODEL" length="20" not-null="true" />
+        </property>
+        <property name="marque" type="string">
+            <column name="MARQUE" length="20" not-null="true" />
+        </property>
+        <property name="puissance" type="big_decimal">
+            <column name="PUISSANCE" precision="2" scale="1" not-null="true" />
+        </property>
+        <property name="tarifJour" type="big_decimal">
+            <column name="TARIF_JOUR" precision="5" not-null="true" />
+        </property>
+        <property name="photo" type="string">
+            <column name="PHOTO" length="100" not-null="true" />
+        </property>
+        <property name="nbplaces" type="java.lang.Byte">
+            <column name="NBPLACES" precision="2" scale="0" />
+        </property>
+        <set name="vehicules" table="VEHICULE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CODE_MODEL" precision="3" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="dao.Vehicule" />
+        </set>
+    </class>
+</hibernate-mapping>

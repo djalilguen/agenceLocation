@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-09-27 22:49:49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dao.Contact" table="CONTACT" schema="NASRI" optimistic-lock="version">
+        <id name="numContact" type="int">
+            <column name="NUM_CONTACT" precision="5" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="client" class="dao.Client" fetch="select">
+            <column name="NUMCLIENT" precision="7" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="message" type="string">
+            <column name="MESSAGE" length="140" not-null="true" />
+        </property>
+        <property name="datemessage" type="date">
+            <column name="DATEMESSAGE" length="7" not-null="true" />
+        </property>
+        <property name="sujet" type="string">
+            <column name="SUJET" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

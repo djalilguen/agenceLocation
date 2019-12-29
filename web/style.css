@@ -1,0 +1,240 @@
+* {
+	font-family: "Segoe UI",Arial,sans-serif;
+	padding: 0;
+	margin: 0;
+}
+body {
+    background-color : #f4f4f2;
+}
+
+.entete{
+	position: relative;
+	display: block;
+	/*border: 1px solid red;*/
+	background-color: #022c70;
+	padding: 0px;
+	margin:0px;
+	text-align: center;
+	width: 100%;
+	height: 150px;
+}
+
+.bas{
+	position: relative;
+	display: block;
+	/*border: 1px solid red;*/
+	background-color: #022c70;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+	height: 200px;
+}
+
+
+.bas p{
+	/*position : absolute; 	border: 1px green solid !important;
+	display: inline;
+	float:left;
+    top : 10px;
+    left : 10px;*/
+    color : white;
+    margin-right : 10px;
+	font-size : 100%;
+	text-decoration: none;
+	padding: 8px 12px;
+	/*background-color: #dc3545;
+	border-radius: 5px;
+	width: 50%;*/
+	height: 40px;
+}
+
+.bas a{
+	/*position : absolute; 	border: 1px green solid !important;*/
+	display: inline;
+	float:right;
+    bottom : 2px;
+    right : 10px;
+    color : white;
+    margin-right : 10px;
+	
+    font-size : 100%;
+	text-decoration: underline;
+	padding: 8px 12px;
+	/*background-color:#037a0b ;
+	border-radius: 5px;
+	width: 150px; */
+	height: 40px;
+}
+
+.bas img{
+	width : 75px;
+    height : 45px;
+ /*   border : 1px solid lightgray;*/
+    margin : 5px;
+    float : center;
+}
+
+.baslogo{
+	 position: absolute;
+	 display:inline;
+	 top: 50px;
+	 right: 300px;
+	 width: 50%x;
+	/* border: 2px solid green;*/
+	 height: 150px;
+	 float: left;
+}
+
+.baslogo img{
+	width : 400px;
+    height : 150px;
+ /*   border : 1px solid lightgray;
+    margin : 10px;*/
+    float : right;
+}
+
+
+
+.divRelative{
+	 position: absolute;
+	 display:inline;
+	 bottom: 2px;
+	 right: 2px;
+	 width: 500px;
+	 /*border: 2px solid green;*/
+	 height: 50px;
+	 float: right;
+}
+
+
+.menu{
+	font-weight : bold;
+    position : relative;/*marque l'élément comme positionné*/
+	/*border: 1px green solid !important;
+	bottom: 20px;
+	right: 10;*/
+}
+.menu a{
+	/*position : absolute; 	border: 1px green solid !important;*/
+	display: inline;
+	float:right;
+    bottom : 2px;
+    right : 10px;
+    color : white;
+    margin-right : 10px;
+	
+    font-size : 100%;
+	text-decoration: none;
+	padding: 8px 12px;
+	background-color:#037a0b ;
+	border-radius: 5px;
+	width: 150px;
+	height: 40px;
+}
+
+.menu a:hover {
+  background-color: #dc3545;  
+  color: black;
+}
+
+.logo img{
+	width : 400px;
+    height : 150px;
+ /*   border : 1px solid lightgray;
+    margin : 10px;*/
+    float : right;
+}
+	
+.logo-a{
+	position: absolute;
+	bottom:-50px;
+	width : 50px;
+    height : 50px;
+ /*   border : 1px solid lightgray;
+    margin : 10px;*/
+    float : right;
+}
+.logo{
+	 position: absolute;
+	 display:inline;
+	 top: -100px;
+	 right: 300px;
+	 width: 50%x;
+	/* border: 2px solid green;*/
+	 height: 150px;
+	 float: left;
+}
+
+.logo p{
+	position : absolute; 	/*border: 1px green solid !important;*/
+	display: block;
+	float:left;
+    top : 10px;
+    left : 10px;
+    color : white;
+    margin-right : 10px;
+	font-size : 100%;
+	text-decoration: none;
+	padding: 8px 12px;
+	background-color: #dc3545;
+	border-radius: 5px;
+	width: 50%;
+	height: 40px;
+}
+
+
+
+
+.cellule {
+    /*background-color : white;*/
+    margin : 5px;
+}
+
+.petit {
+    height : 100px;
+  /*  border : 1px solid #ddd;*/
+    border-width: 1px 2px 2px 1px;
+}
+.cellule img {
+    width : 100%;
+    height : 100%;
+    margin : 0;
+}
+.petit p {
+    font-weight : bold;
+    font-size: 0.9em;
+    text-align: justify;
+    padding-right: 10px;
+	margin-top: 0;
+}
+.petit img {
+    width : 150px;
+    height : 150px;
+ /*   border : 1px solid lightgray;
+    margin : 10px;*/
+    float : left;
+}
+.detailPrix {
+	position: absolute;
+	top:-10px;
+	left:-10px;
+	width: 90px;
+	height: 90px;
+ 	
+}
+.detailPrix img{
+	   width: 100%;
+		max-height: 100%;
+		max-width:100%;
+}
+
+.detailPrix p{
+		position: absolute;
+		top:30px;
+		left:25px;
+		font-weight:bold;
+		font-size: 1.5em;
+		color: white;
+		float: center;
+}
+

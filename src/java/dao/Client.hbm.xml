@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-09-27 22:49:49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dao.Client" table="CLIENT" schema="NASRI" optimistic-lock="version">
+        <id name="numclient" type="int">
+            <column name="NUMCLIENT" precision="7" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomClient" type="string">
+            <column name="NOM_CLIENT" length="30" not-null="true" />
+        </property>
+        <property name="prenomClient" type="string">
+            <column name="PRENOM_CLIENT" length="30" not-null="true" />
+        </property>
+        <property name="adresse" type="string">
+            <column name="ADRESSE" length="100" not-null="true" />
+        </property>
+        <property name="ville" type="string">
+            <column name="VILLE" length="20" not-null="true" />
+        </property>
+        <property name="codePostal" type="string">
+            <column name="CODE_POSTAL" length="6" not-null="true" />
+        </property>
+        <property name="age" type="short">
+            <column name="AGE" precision="3" scale="0" not-null="true" />
+        </property>
+        <property name="permis" type="string">
+            <column name="PERMIS" length="20" not-null="true" />
+        </property>
+        <property name="courriel" type="string">
+            <column name="COURRIEL" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="telephone" type="string">
+            <column name="TELEPHONE" length="10" not-null="true" unique="true" />
+        </property>
+        <set name="contacts" table="CONTACT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="NUMCLIENT" precision="7" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="dao.Contact" />
+        </set>
+        <set name="logins" table="LOGIN" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="NUMCLIENT" precision="7" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="dao.Login" />
+        </set>
+        <set name="contrats" table="CONTRAT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="NUMCLIENT" precision="3" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="dao.Contrat" />
+        </set>
+    </class>
+</hibernate-mapping>

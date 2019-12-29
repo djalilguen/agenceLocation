@@ -1,0 +1,31 @@
+<fmt:bundle basename="ressources_i18n.Messages">
+    <footer class="bas">
+        <div class="col-4">
+            <p><fmt:message key="adresse" /> : 9999 Rue Rue1 </p>
+            <p> Montreal (Qc) </p>
+            <p>H1H 2K2K </p>
+            <p>TEL : (514)444-5555</p>
+        </div>
+        <div class="col-4">
+            <a href="Controleur?action=contact"><fmt:message key="contact" /></a>
+            <a href="Controleur?action=catalogue"><fmt:message key="louer.voiture" /></a>
+            <a href="Controleur?action=default"><fmt:message key="accueil" /></a>
+
+            <div class="baslogo">   <!-- div pour logo text -->
+                <img src="images/design-car.png" alt='LOGO' />
+            </div>
+        </div>
+        <div class="col-4">
+            <div>   <!-- div pour logo facebook -->
+                <a href = "https://www.facebook.com/" target = "_blank"><img src="images/facebook.png" alt='facebook' /></a>
+            </div>
+            <div>   <!-- div pour logo twitter -->
+                <a href = "https://twitter.com/?lang=fr" target = "_blank"> <img src="images/twitter.png" alt='twitter' /></a>
+            </div>
+            <div>   <!-- div pour logo youtube -->
+                <a href = "https://www.youtube.com/" target = "_blank"> <img src="images/youtube.png" alt='youtube' /></a>
+            </div>
+        </div>
+
+    </footer>
+</fmt:bundle>
